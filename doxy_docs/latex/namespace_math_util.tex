@@ -1,0 +1,90 @@
+\doxysection{Math\+Util Namespace Reference}
+\hypertarget{namespace_math_util}{}\label{namespace_math_util}\index{MathUtil@{MathUtil}}
+
+
+Namespace for common math utility functions.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{namespace_math_util_a86f544559f2752af71c1915974a47ccc}{world\+To\+Body2D}} (const std\+::pair$<$ float, float $>$ \&a\+World\+\_\+quant, const float a\+Theta\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Transforms a 2d quantity from world frame to body frame. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{namespace_math_util_a0a2591671813749643a0bee726b278d1}{body\+To\+World2D}} (const std\+::pair$<$ float, float $>$ \&a\+Body\+\_\+quant, const float a\+Theta\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Transforms a 2d quantity from robot frame to world frame. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespace_math_util_ae08685d342fe745b984b6b25ae615c9a}{sample\+Normal}} (const float a\+Mean, const float a\+Variance)
+\begin{DoxyCompactList}\small\item\em Generates a random sample from the Gaussian\+: N(mean, variance). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Namespace for common math utility functions. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_math_util_a0a2591671813749643a0bee726b278d1}\index{MathUtil@{MathUtil}!bodyToWorld2D@{bodyToWorld2D}}
+\index{bodyToWorld2D@{bodyToWorld2D}!MathUtil@{MathUtil}}
+\doxysubsubsection{\texorpdfstring{bodyToWorld2D()}{bodyToWorld2D()}}
+{\footnotesize\ttfamily \label{namespace_math_util_a0a2591671813749643a0bee726b278d1} 
+std\+::pair$<$ float, float $>$ Math\+Util\+::body\+To\+World2D (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ float, float $>$ \&}]{a\+Body\+\_\+quant}{, }\item[{const float}]{a\+Theta\+\_\+rad}{}\end{DoxyParamCaption})}
+
+
+
+Transforms a 2d quantity from robot frame to world frame. 
+
+Multiplies the 2d vector with inverse rotational matrix given the heading in radians Body Frame coordinate\+: front x, right y, clockwise rotation from x to y as positive
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Body\+\_\+pose} & 2D quantity in robot frame \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Theta\+\_\+rad} & Robot heading angle in randians\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+quantity in world frame 
+\end{DoxyReturn}
+\Hypertarget{namespace_math_util_ae08685d342fe745b984b6b25ae615c9a}\index{MathUtil@{MathUtil}!sampleNormal@{sampleNormal}}
+\index{sampleNormal@{sampleNormal}!MathUtil@{MathUtil}}
+\doxysubsubsection{\texorpdfstring{sampleNormal()}{sampleNormal()}}
+{\footnotesize\ttfamily \label{namespace_math_util_ae08685d342fe745b984b6b25ae615c9a} 
+float Math\+Util\+::sample\+Normal (\begin{DoxyParamCaption}\item[{const float}]{a\+Mean}{, }\item[{const float}]{a\+Variance}{}\end{DoxyParamCaption})}
+
+
+
+Generates a random sample from the Gaussian\+: N(mean, variance). 
+
+Reference\+: Probabilistic Robotics, Ch. 5.\+3, Table 5.\+4 (pg. 124). Further reading from Winkler (1995; pg. 293) may be advised. C++ has a built in normal distribution template, see\+: \href{https://en.cppreference.com/w/cpp/numeric/random/normal_distribution}{\texttt{ https\+://en.\+cppreference.\+com/w/cpp/numeric/random/normal\+\_\+distribution}}
+
+TODO\+: Ensure we\textquotesingle{}re talking about stddev and variance correctly, because Prob\+Rob has a typo somewhere in Table 5.\+4. Beware!
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Mean} & Mean of the sampled Normal distribution \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Variance} & Variance of the sampled Normal distribution\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Random value, distributed according to the defined Gaussian 
+\end{DoxyReturn}
+\Hypertarget{namespace_math_util_a86f544559f2752af71c1915974a47ccc}\index{MathUtil@{MathUtil}!worldToBody2D@{worldToBody2D}}
+\index{worldToBody2D@{worldToBody2D}!MathUtil@{MathUtil}}
+\doxysubsubsection{\texorpdfstring{worldToBody2D()}{worldToBody2D()}}
+{\footnotesize\ttfamily \label{namespace_math_util_a86f544559f2752af71c1915974a47ccc} 
+std\+::pair$<$ float, float $>$ Math\+Util\+::world\+To\+Body2D (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ float, float $>$ \&}]{a\+World\+\_\+quant}{, }\item[{const float}]{a\+Theta\+\_\+rad}{}\end{DoxyParamCaption})}
+
+
+
+Transforms a 2d quantity from world frame to body frame. 
+
+Multiplies the 2d vector with rotational matrix given the heading in radians. World Frame Coordinate\+: front x, right y, clockwise rotation from x to y as positive
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+World\+\_\+quant} & 2D quantity in world frame \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Theta\+\_\+rad} & Robot heading angle in randians\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+quantity in robot frame 
+\end{DoxyReturn}
