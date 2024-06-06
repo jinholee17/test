@@ -1,2 +1,0 @@
-add_subdirectory(TestClass)
-add_subdirectory(FastSLAM)
