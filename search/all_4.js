@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['math_2dutil_2eh_0',['math-util.h',['../math-util_8h.html',1,'']]],
-  ['mathutil_1',['MathUtil',['../namespace_math_util.html',1,'']]]
+  ['math_2dutil_2eh_6',['math-util.h',['../math-util_8h.html',1,'']]],
+  ['mathutil_7',['MathUtil',['../namespaceMathUtil.html',1,'']]]
 ];
