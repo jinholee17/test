@@ -10,18 +10,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Create .nojekyll File
-        run: touch doxy_docs/main/.nojekyll
       - name: Deploy Main Branch Documentation
         if: github.ref == 'refs/heads/main'
         uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          folder: doxy_docs/main # Store documentation for main branch in a separate folder
+          folder: doxy_docs/main/html # Store documentation for main branch in a separate folder
 
       - name: Deploy Dev Branch Documentation
         if: github.ref == 'refs/heads/dev' # Only deploy for the dev branch
         uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          folder: doxy_docs/dev # Store documentation for dev branch in a separate folder
+          folder: doxy_docs/dev/html # Store documentation for dev branch in a separate folder
