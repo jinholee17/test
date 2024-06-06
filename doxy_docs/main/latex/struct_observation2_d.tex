@@ -1,0 +1,38 @@
+\doxysection{Observation2D Struct Reference}
+\hypertarget{struct_observation2_d}{}\label{struct_observation2_d}\index{Observation2D@{Observation2D}}
+
+
+{\ttfamily \#include $<$core-\/structs.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_observation2_d_aaad65273dcf884c02d89f750f39ce9a7}\label{struct_observation2_d_aaad65273dcf884c02d89f750f39ce9a7} 
+float {\bfseries range\+\_\+m}
+\item 
+\Hypertarget{struct_observation2_d_a306c25ead89e507adc8c85ee11213dba}\label{struct_observation2_d_a306c25ead89e507adc8c85ee11213dba} 
+float {\bfseries bearing\+\_\+rad}
+\item 
+std\+::optional$<$ int $>$ \mbox{\hyperlink{struct_observation2_d_a4636875079f2d3c949316c1b26408d50}{landmark\+ID}}
+\begin{DoxyCompactList}\small\item\em Stores the landmark signature corresponding to the observation. Set to std\+::nullopt to represent an unknown correspondence variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An observation of a landmark as viewed from the robot\textquotesingle{}s perspective. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_observation2_d_a4636875079f2d3c949316c1b26408d50}\index{Observation2D@{Observation2D}!landmarkID@{landmarkID}}
+\index{landmarkID@{landmarkID}!Observation2D@{Observation2D}}
+\doxysubsubsection{\texorpdfstring{landmarkID}{landmarkID}}
+{\footnotesize\ttfamily \label{struct_observation2_d_a4636875079f2d3c949316c1b26408d50} 
+std\+::optional$<$int$>$ Observation2\+D\+::landmark\+ID}
+
+
+
+Stores the landmark signature corresponding to the observation. Set to std\+::nullopt to represent an unknown correspondence variable. 
+
+TODO\+: When DA is unknown, each particle\textquotesingle{}s correspondence may differ. Populating/clearing this field may be more trouble than it\textquotesingle{}s worth... 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{core-structs_8h}{core-\/structs.\+h}}\end{DoxyCompactItemize}
