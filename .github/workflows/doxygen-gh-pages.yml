@@ -10,6 +10,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Create .nojekyll File
+        run: touch doxy_docs/main/.nojekyll
       - name: Deploy Main Branch Documentation
         if: github.ref == 'refs/heads/main'
         uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
