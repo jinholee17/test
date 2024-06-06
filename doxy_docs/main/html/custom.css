@@ -2,7 +2,7 @@
 
 html {
   /* page base colors */
-  --page-background-color: rgb(238, 213, 255);
+  --page-background-color: white;
   --page-foreground-color: black;
   --page-link-color: #3d578c;
   --page-visited-link-color: #4665a2;
