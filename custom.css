@@ -2,7 +2,7 @@
 
 html {
   /* page base colors */
-  --page-background-color: rgb(238, 213, 255);
+  --page-background-color: white;
   --page-foreground-color: black;
   --page-link-color: #3d578c;
   --page-visited-link-color: #4665a2;
@@ -14,10 +14,10 @@ html {
   --index-separator-color: #a0a0a0;
 
   /* header */
-  --header-background-color: #f9fafc;
+  --header-background-color: #e9d6ff;
   --header-separator-color: #c4cfe5;
   --header-gradient-image: url("nav_h.png");
-  --group-header-separator-color: #879ecb;
+  --group-header-separator-color: #cb8789;
   --group-header-color: #354c7b;
   --inherit-header-color: gray;
 
